@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClearMe settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <header class="masthead">
+        <img src="icons/icon48.png" alt="" width="48" height="48" />
+        <div>
+          <h1>ClearMe</h1>
+          <p class="lede">
+            Click the toolbar icon to clear the current site. Choose what gets
+            cleared below.
+          </p>
+        </div>
+        <span class="saved" id="saved" role="status" aria-live="polite"></span>
+      </header>
+
+      <section class="card">
+        <h2>What to clear</h2>
+        <ul class="rows">
+          <li>
+            <label class="row">
+              <span class="copy">
+                <strong>Cookies</strong>
+                <small>Signs you out. Removes cookies for the whole domain, including subdomains.</small>
+              </span>
+              <input type="checkbox" data-key="cookies" />
+            </label>
+          </li>
+          <li>
+            <label class="row">
+              <span class="copy">
+                <strong>Cache</strong>
+                <small>Removes this site's cached files so assets load fresh.</small>
+              </span>
+              <input type="checkbox" data-key="cache" />
+            </label>
+          </li>
+          <li>
+            <label class="row">
+              <span class="copy">
+                <strong>Cache storage</strong>
+                <small>Clears Cache Storage used by service workers.</small>
+              </span>
+              <input type="checkbox" data-key="cacheStorage" />
+            </label>
+          </li>
+          <li>
+            <label class="row">
+              <span class="copy">
+                <strong>Local storage</strong>
+                <small>Removes localStorage and sessionStorage for the site.</small>
+              </span>
+              <input type="checkbox" data-key="localStorage" />
+            </label>
+          </li>
+          <li>
+            <label class="row">
+              <span class="copy">
+                <strong>IndexedDB</strong>
+                <small>Deletes the site's IndexedDB databases.</small>
+              </span>
+              <input type="checkbox" data-key="indexedDB" />
+            </label>
+          </li>
+          <li>
+            <label class="row">
+              <span class="copy">
+                <strong>Service workers</strong>
+                <small>Unregisters service workers so old scripts stop running.</small>
+              </span>
+              <input type="checkbox" data-key="serviceWorkers" />
+            </label>
+          </li>
+          <li>
+            <label class="row">
+              <span class="copy">
+                <strong>File system storage</strong>
+                <small>Removes File System API data. Rarely used by sites; off by default.</small>
+              </span>
+              <input type="checkbox" data-key="fileSystems" />
+            </label>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>After clearing</h2>
+        <ul class="rows">
+          <li>
+            <label class="row">
+              <span class="copy">
+                <strong>Reload the page</strong>
+                <small>Loads the site again with the cleared data.</small>
+              </span>
+              <input type="checkbox" data-key="reload" />
+            </label>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card danger">
+        <h2>All sites</h2>
+        <p class="body">
+          Clear the selected data types for every website in this browser
+          profile. Cookies and local data for all sites will be removed.
+        </p>
+        <button type="button" class="btn danger" id="clear-all">
+          Clear data for all sites
+        </button>
+        <p class="feedback" id="clear-all-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <footer>
+        <button type="button" class="btn subtle" id="reset">Reset to defaults</button>
+        <p class="tip">
+          Click the toolbar icon for a one-click clean. Right-click the icon
+          &rarr; <strong>Options</strong> to return here.
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>
