@@ -8,6 +8,13 @@
   One click clears the current site's cookies, cache and storage — then reloads the page.
 </p>
 
+<p align="center">
+  <img alt="Manifest V3" src="https://img.shields.io/badge/manifest-v3-0e7490?style=flat-square">
+  <img alt="Tested on Thorium" src="https://img.shields.io/badge/tested_on-Thorium-475569?style=flat-square">
+  <img alt="No host permissions" src="https://img.shields.io/badge/host_permissions-none-0e7490?style=flat-square">
+  <img alt="No telemetry" src="https://img.shields.io/badge/telemetry-none-475569?style=flat-square">
+</p>
+
 A small, popup-free Chromium extension for those moments when a site is acting
 up, an asset is stubbornly stale, or you want a clean sign-out. Click the
 toolbar icon and it clears the current site immediately.
@@ -15,14 +22,18 @@ toolbar icon and it clears the current site immediately.
 Built for [Thorium](https://thorium.rocks/) and tested there; it works in other
 Chromium-based browsers that support Manifest V3.
 
-## Why
+## Useful when
 
-- **Fix weird sites.** Stale caches, leftover service workers and old site data
-  cause problems that a normal reload can't solve.
-- **Log out completely.** Cookies for the whole domain, plus local storage,
-  IndexedDB and friends.
-- **Stay in control.** Choose what gets cleared; defaults cover the useful
-  cases.
+- **You're a web designer.** You changed CSS, JS or assets and need the browser
+  to load the new files now — not a cached copy.
+- **You're a developer.** A deploy looks stale, a service worker keeps serving
+  the old app, or local state is stuck.
+- **You want out quickly.** One click signs you out; no hunting for a buried or
+  missing logout button.
+- **A site is misbehaving.** Leftover cookies, storage or service workers make
+  it loop or crash; clear everything and reload.
+- **You're done with a site.** Remove its cookies and data without digging
+  through browser settings.
 
 ## Features
 
