@@ -46,7 +46,7 @@ Chromium-based browsers that support Manifest V3.
 - Configurable in Options; settings save automatically.
 - Optional page reload after clearing (on by default).
 - "Clear data for all sites" for a full browser-profile cleanup.
-- No host permissions, no content scripts, no network requests, no telemetry.
+- No host permissions, no content scripts, no telemetry, no remote servers.
 
 ## Install
 
@@ -115,7 +115,7 @@ Deliberately untouched: history, downloads, passwords and autofill data.
 | `storage` | Saves your settings (via `chrome.storage.sync`) |
 | `activeTab` | Reads the current tab's URL after you click the icon |
 
-No `<all_urls>`, no content scripts, no background network access.
+No `<all_urls>`, no content scripts, no remote servers and no telemetry.
 
 ## Notes
 
@@ -136,6 +136,11 @@ icons/               extension icons
 
 No build step. Edit the files and reload the extension from
 `thorium://extensions`.
+
+## Privacy
+
+ClearMe collects no data and shares nothing; settings sync is handled by your
+browser. Read the [privacy policy](PRIVACY.md).
 
 ## Author
 
